@@ -1,4 +1,4 @@
-import logoImage from '../../assets/LogoHorizontal.png'; 
+import logoImage from '../../assets/LogoPlanit.png'; 
 import './Logo.css';
 
 export function Logo() {
