@@ -1,5 +1,6 @@
 import { DeleteButton } from '../ui/DeleteButton/DeleteButton';
 import { UpdateButton } from '../ui/UpdateButton/UpdateButton';
+import DOMPurify from "dompurify";
 import './TaskItem.css'
 export function TaskItem({ task, onDelete, onEdit, onToggle }) {
     return (
@@ -30,7 +31,23 @@ export function TaskItem({ task, onDelete, onEdit, onToggle }) {
             <h4 className="task-title">{task.title}</h4>
 
             {task.description && (
-                <p className="task-desc">{task.description}</p>
+                <div
+                    className="task-desc"
+                    dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(task.description, {
+                            ADD_TAGS: ["iframe"],
+                            ADD_ATTR: [
+                                "allow",
+                                "allowfullscreen",
+                                "frameborder",
+                                "scrolling",
+                                "src",
+                                "width",
+                                "height"
+                            ]
+                        })
+                    }}
+                />
             )}
 
         </div>

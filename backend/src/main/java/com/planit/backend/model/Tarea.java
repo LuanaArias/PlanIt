@@ -2,6 +2,7 @@ package com.planit.backend.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +19,7 @@ public class Tarea {
 
     private String title;
 
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     private boolean completed;

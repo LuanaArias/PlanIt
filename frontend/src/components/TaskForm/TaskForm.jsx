@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import './TaskForm.css'
+import { TextEditor } from "../TextEditor/TextEditor";
 export function TaskForm({ onSubmit, editingTask }){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -53,12 +54,9 @@ export function TaskForm({ onSubmit, editingTask }){
                     <label htmlFor="taskDesc">
                         Descripción
                     </label>
-                    <textarea 
-                        id="taskDesc"
-                        rows="3"
-                        placeholder="Descripción"
-                        value={description} 
-                        onChange={(e) => setDescription(e.target.value)}
+                    <TextEditor
+                        content={description}
+                        onChange={setDescription}
                     />
                 </div>
 

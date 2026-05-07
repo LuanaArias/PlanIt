@@ -93,6 +93,44 @@
   box-sizing: border-box;
 }
 
+.editor-container{
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #111;
+}
+
+.editor-toolbar{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #2c2c2c;
+    background-color: #1a1a1a;
+}
+
+.editor-toolbar button{
+    background: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.editor-toolbar button:hover{
+    background-color: #3a3a3a;
+}
+
+.tiptap-editor{
+    min-height: 150px;
+    padding: 15px;
+    outline: none;
+    color: white;
+}
+
+.tiptap-editor p{
+    margin: 0;
+}
 @media (min-width: 768px) {
   .form-group input,
   .form-group textarea {

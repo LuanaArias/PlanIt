@@ -8,6 +8,8 @@
   transition: 0.2s;
   width: 100%;
   margin: 0; 
+  min-width: 0;
+  overflow: hidden;
 }
 
 .task-item:hover {
@@ -113,6 +115,72 @@
   padding: 4px;
 }
 
+
+
+
+
+/* TEXTEDITOR */
+
+.task-desc{
+  width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.task-desc *{
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* IMAGENES */
+
+.task-desc img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 12px;
+  object-fit: cover;
+}
+
+/* VIDEOS */
+
+.task-desc iframe{
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  min-height: 220px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+/* PÁRRAFOS */
+
+.task-desc p{
+  line-height: 1.6;
+}
+
+/* LISTAS */
+
+.task-desc ul,
+.task-desc ol{
+  padding-left: 20px;
+}
+
+
+
+/* CODE */
+
+.task-desc pre{
+  overflow-x: auto;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.2);
+}
 @media (min-width: 768px) {
   .task-actions button {
     font-size: 14px;
