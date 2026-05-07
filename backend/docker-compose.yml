@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: planit-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: planit_db
+      POSTGRES_USER: planit_user
+      POSTGRES_PASSWORD: planit_pass
+      TZ: UTC
+      PGTZ: UTC
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

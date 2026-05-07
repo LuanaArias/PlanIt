@@ -1,0 +1,63 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+  padding: 20px;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tasklist-mytasks{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.app-content h1 {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--color-accent);
+  text-shadow: var(--shadow-glow);
+}
+
+@media (min-width: 768px) {
+  .app-content {
+    padding: 0 1rem 3rem;
+  }
+  .tasklist-card {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-content {
+    width: 100%;
+    padding: 0 0 5rem;
+  }
+
+  .tasklist-card {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

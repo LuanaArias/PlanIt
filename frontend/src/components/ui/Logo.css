@@ -1,0 +1,42 @@
+.logo-component-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-image-asset {
+  width: 100%;           
+  max-width: 300px;     
+  height: auto;        
+  display: block;       
+}
+
+@media (max-width: 480px) {
+  .logo-component-container {
+    padding: 5px;
+  }
+
+  .logo-image-asset {
+    max-width: 180px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .logo-image-asset {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo-image-asset {
+    max-width: 280px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .logo-image-asset {
+    max-width: 320px;
+  }
+}
