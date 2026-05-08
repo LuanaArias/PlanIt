@@ -18,25 +18,25 @@
   }
 
   .logo-image-asset {
-    max-width: 180px;
+    max-width: 140px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .logo-image-asset {
-    max-width: 220px;
+    max-width: 150px;
   }
 }
 
 @media (min-width: 769px) {
   .logo-image-asset {
-    max-width: 280px;
+    max-width: 180px;
   }
 }
 
 
 @media (min-width: 1200px) {
   .logo-image-asset {
-    max-width: 320px;
+    max-width: 200px;
   }
 }

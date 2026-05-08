@@ -12,6 +12,10 @@ import Image from "@tiptap/extension-image";
 import Youtube from "@tiptap/extension-youtube";
 
 import './TextEditor.css';
+import { AlignRight } from "../ui/BotonesEditor/AlignRight.jsx";
+import { AlignCenter } from "../ui/BotonesEditor/AlignCenter.jsx";
+import { AlignLeft } from "../ui/BotonesEditor/AlignLeft.jsx";
+import { IconImage } from "../ui/BotonesEditor/IconImage.jsx";
 
 export function TextEditor({ content, onChange }) {
 
@@ -106,7 +110,7 @@ export function TextEditor({ content, onChange }) {
                     className={editor.isActive("underline") ? "is-active" : ""}
                     onClick={() => editor.chain().focus().toggleUnderline().run()}
                 >
-                    U
+                    <u>U</u>
                 </button>
 
                 {/* BULLET LIST */}
@@ -129,7 +133,7 @@ export function TextEditor({ content, onChange }) {
                         editor.chain().focus().setTextAlign("left").run()
                     }
                 >
-                    ⬅
+                    <AlignLeft />
                 </button>
 
                 {/* ALIGN CENTER */}
@@ -140,7 +144,7 @@ export function TextEditor({ content, onChange }) {
                         editor.chain().focus().setTextAlign("center").run()
                     }
                 >
-                    ⬍
+                    <AlignCenter />
                 </button>
 
                 {/* ALIGN RIGHT */}
@@ -151,7 +155,7 @@ export function TextEditor({ content, onChange }) {
                         editor.chain().focus().setTextAlign("right").run()
                     }
                 >
-                    ➡
+                    <AlignRight />
                 </button>
 
                 {/* FONT SIZE */}
@@ -214,7 +218,7 @@ export function TextEditor({ content, onChange }) {
                         }
                     }}
                 >
-                    🖼
+                    <IconImage />
                 </button>
 
                 {/* YOUTUBE */}

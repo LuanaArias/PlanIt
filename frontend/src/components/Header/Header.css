@@ -7,13 +7,11 @@
 
 .header-bar {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 10px 20px;
 }
 
