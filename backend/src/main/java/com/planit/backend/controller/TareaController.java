@@ -22,7 +22,7 @@ import com.planit.backend.repository.TareaRepository;
 
 @RestController
 @RequestMapping("/api/tareas")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://planit-1-dbus.onrender.com")
 public class TareaController {
     @Autowired
     private TareaRepository repositorio;
@@ -33,10 +33,12 @@ public class TareaController {
     }
 
     @PostMapping
-    public Tarea create(@RequestBody Tarea tarea) {
-        return repositorio.save(tarea);
+    public Tarea create(@RequestBody Tarea nuevaTarea) {
+        if (nuevaTarea == null) {
+            return null; 
+        }
+        return repositorio.save(nuevaTarea);
     }
-
     @PutMapping("/{id}")
     public ResponseEntity<?> update(
         @PathVariable Long id,
