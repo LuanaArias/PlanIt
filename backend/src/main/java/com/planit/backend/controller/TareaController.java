@@ -23,7 +23,7 @@ import com.planit.backend.repository.TareaRepository;
 
 @RestController
 @RequestMapping("/api/tareas")
-@CrossOrigin(origins = "https://planit-1-dbus.onrender.com")
+@CrossOrigin(origins = "https://planit-b6e6f.web.app")
 public class TareaController {
     @Autowired
     private TareaRepository repositorio;
@@ -38,10 +38,10 @@ public class TareaController {
         Tarea guardada = repositorio.save(nuevaTarea);
         return ResponseEntity.status(HttpStatus.CREATED).body(guardada);
     }
-    
+
     @PutMapping("/{id}")
     public ResponseEntity<?> update(
-        @PathVariable Long id,
+        @PathVariable @NonNull Long id,
         @RequestBody Tarea tareaActualizada) {
 
         Optional<Tarea> optionalTarea = repositorio.findById(id);
