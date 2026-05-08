@@ -1,5 +1,5 @@
 import { auth } from "../firebase.js";
-const API = "http://localhost:8080/api/tareas";
+const API = "https://planit-56ro.onrender.com/api/tareas";
 
 //Obtener todas las tareas
 export const getTasks = async () => {
