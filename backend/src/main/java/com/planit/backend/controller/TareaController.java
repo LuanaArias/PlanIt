@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,12 +34,11 @@ public class TareaController {
     }
 
     @PostMapping
-    public Tarea create(@RequestBody Tarea nuevaTarea) {
-        if (nuevaTarea == null) {
-            return null; 
-        }
-        return repositorio.save(nuevaTarea);
+    public ResponseEntity<Tarea> create(@RequestBody @NonNull Tarea nuevaTarea) {
+        Tarea guardada = repositorio.save(nuevaTarea);
+        return ResponseEntity.status(HttpStatus.CREATED).body(guardada);
     }
+    
     @PutMapping("/{id}")
     public ResponseEntity<?> update(
         @PathVariable Long id,
@@ -64,7 +64,7 @@ public class TareaController {
     }
     
     @PatchMapping("/{id}/completa")
-    public ResponseEntity<?> marcarCompleta(@PathVariable Long id) {
+    public ResponseEntity<?> marcarCompleta(@PathVariable @NonNull Long id) {
 
         return repositorio.findById(id)
             .map(tarea -> {
@@ -78,7 +78,7 @@ public class TareaController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable @NonNull Long id) {
         repositorio.deleteById(id);
     }
 }
