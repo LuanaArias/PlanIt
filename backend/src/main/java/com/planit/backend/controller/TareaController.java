@@ -23,7 +23,10 @@ import com.planit.backend.repository.TareaRepository;
 
 @RestController
 @RequestMapping("/api/tareas")
-@CrossOrigin(origins = "https://planit-b6e6f.web.app")
+@CrossOrigin(origins = {
+    "https://planit-b6e6f.web.app",
+    "https://planit-b6e6f.firebaseapp.com"
+})
 public class TareaController {
     @Autowired
     private TareaRepository repositorio;

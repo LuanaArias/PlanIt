@@ -23,7 +23,9 @@ export function TextEditor({ content, onChange }) {
 
         extensions: [
 
-            StarterKit,
+            StarterKit.configure({
+                underline: false,
+            }),
 
             Underline,
 
