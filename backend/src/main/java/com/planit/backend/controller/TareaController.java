@@ -1,5 +1,6 @@
 package com.planit.backend.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,13 +52,22 @@ public class TareaController {
         }
 
         Tarea tarea = optionalTarea.get();
-
         tarea.setTitle(tareaActualizada.getTitle());
         tarea.setDescription(tareaActualizada.getDescription());
-        tarea.setCompleted(tareaActualizada.isCompleted());
 
+        boolean estabaCompleta = tarea.isCompleted();
+        boolean nuevaCompletada = tareaActualizada.isCompleted();
+
+        tarea.setCompleted(nuevaCompletada);
+
+        if (!estabaCompleta && nuevaCompletada) {
+            tarea.setCompletedAt(LocalDateTime.now());
+        }
+
+        if (estabaCompleta && !nuevaCompletada) {
+            tarea.setCompletedAt(null);
+        }
         repositorio.save(tarea);
-
         return ResponseEntity.ok(tarea);
     }
     
@@ -66,13 +76,22 @@ public class TareaController {
 
         return repositorio.findById(id)
             .map(tarea -> {
-                tarea.setCompleted(!tarea.isCompleted());
+
+                boolean nuevoEstado = !tarea.isCompleted();
+
+                tarea.setCompleted(nuevoEstado);
+
+                if (nuevoEstado) {
+                    tarea.setCompletedAt(LocalDateTime.now());
+                } else {
+                    tarea.setCompletedAt(null);
+                }
 
                 Tarea tareaActualizada = repositorio.save(tarea);
 
                 return ResponseEntity.ok(tareaActualizada);
             })
-            .orElse(ResponseEntity.notFound().build());
+        .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")

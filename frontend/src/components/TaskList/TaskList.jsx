@@ -10,6 +10,7 @@ import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { TaskItem } from "../TaskItem/TaskItem.jsx";
 import { TaskForm } from "../TaskForm/TaskForm.jsx";
 import './TaskList.css'
+import { Dashboard } from "../Dashboard/DashBoard.jsx";
 
 export function TaskList(){
     const [tasks, setTasks] = useState([]);
@@ -92,12 +93,11 @@ export function TaskList(){
 };
     return (
             <div className="tasklist-card">
-                <header className="tasklist-header">
-                    <TaskForm 
-                        onSubmit={handleSubmit} 
-                        editingTask={editingTask}
-                    />
-                </header>
+                <Dashboard tasks={tasks} />
+                <TaskForm 
+                    onSubmit={handleSubmit} 
+                    editingTask={editingTask}
+                />
                 <div className="tasklist-mytasks">
                     <h2 className="tasklist-title">Mis Tareas</h2>
                     <nav className="tasklist-filters-container">

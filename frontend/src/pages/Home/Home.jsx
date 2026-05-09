@@ -32,6 +32,7 @@ export function Home(){
       ) : (
         <div className="app-content">
           <WelcomeText name={user.displayName} />
+          
           <TaskList />
         </div>
       )}
