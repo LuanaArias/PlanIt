@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -23,10 +22,6 @@ import com.planit.backend.repository.TareaRepository;
 
 @RestController
 @RequestMapping("/api/tareas")
-@CrossOrigin(origins = {
-    "https://planit-b6e6f.web.app",
-    "https://planit-b6e6f.firebaseapp.com"
-})
 public class TareaController {
     @Autowired
     private TareaRepository repositorio;
