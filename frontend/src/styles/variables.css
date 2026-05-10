@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root {
-
-  /* Paleta principal */
   --color-bg: #312A44;            
   --color-surface: #4A3D63;       
   --color-surface-light: #6A5A86;
@@ -19,9 +17,9 @@
   /* Gradientes */
   --gradient: linear-gradient(
     135deg,
-    #312A44 0%,
-    #4A3D63 45%,
-    #8870A3 100%
+    #241B33 0%,
+    #312A44 45%,
+    #5E4D78 100%
   );
 
   --gradient-primary: linear-gradient(
@@ -37,8 +35,11 @@
   );
 
   /* Sombras */
-  --shadow-soft: 0 12px 30px rgba(24, 16, 36, 0.35);
-  --shadow-glow: 0 0 24px rgba(186, 160, 200, 0.28);
+  --shadow-soft:
+    0 14px 30px rgba(22, 14, 34, 0.45);
+
+  --shadow-glow:
+    0 10px 30px rgba(186,160,200,.12);
 
   /* Tipografías */
   --font-title: 'Cormorant Garamond', serif;
