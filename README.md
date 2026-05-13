@@ -34,7 +34,7 @@ API REST desplegada en Render:
 - Eliminar tareas
 - Marcar tareas como completadas
 
-  ### 📝 Editor de texto enriquecido (TipTap)
+## 📝 Editor de texto enriquecido (TipTap)
 Las descripciones de tareas incluyen un editor avanzado construido con **TipTap**, permitiendo:
 
 - Texto en **negrita**
