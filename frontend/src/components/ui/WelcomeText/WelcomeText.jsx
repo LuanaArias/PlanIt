@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import './WelcomeText.css'
 export function WelcomeText({ name }) {
     const [displayText, setDisplayText] = useState("");
     const fullText = `Bienvenido/a, ${name || "Usuario"}`;

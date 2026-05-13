@@ -5,7 +5,7 @@ export function LoadingScreen() {
         <div className="loading-screen">
             <div className="loader-content">
                 <div className="spinner"></div>
-                <p className="loader-text">Cargando Taskify...</p>
+                <p className="loader-text">Cargando PlanIt...</p>
             </div>
         </div>
     );

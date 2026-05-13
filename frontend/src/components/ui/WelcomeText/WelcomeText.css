@@ -1,0 +1,6 @@
+.cursor{
+    color: #F5D0E6;
+    -webkit-text-fill-color: #F5D0E6;
+    animation: blink 1s infinite;
+}
+
