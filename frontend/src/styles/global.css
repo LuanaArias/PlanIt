@@ -58,7 +58,6 @@ body::before{
 h1, h2, h3, .tasklist-title{
   font-family: var(--font-title);
   font-weight: 700;
-  letter-spacing: -0.02em;
   color: #2F2640;
 }
 

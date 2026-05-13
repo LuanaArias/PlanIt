@@ -55,12 +55,13 @@
 .stats-card-header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 1rem;
 }
 
 .stats-icon{
-    width: 58px;
-    height: 58px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +80,7 @@
 
 
 .stats-card h3{
-    font-size: .95rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #786F88;
     letter-spacing: .2px;
@@ -133,7 +134,7 @@
 
     .stats-card{
         min-height: 150px;
-        padding: 1.3rem;
+        padding: 1rem;
     }
 
     .stats-value{
@@ -141,8 +142,14 @@
     }
 
     .stats-icon{
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+    .stats-card-header{
+        gap: 0.5rem;
+    }
+
+    .stats-card h3{
+        font-size: 1rem;
     }
 }

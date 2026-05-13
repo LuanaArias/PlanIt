@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
 :root {
-
   /* Fondo */
   --color-bg: #6D5B86;
   --color-bg-secondary: #7C6A98;
@@ -46,7 +46,7 @@
   --shadow-glow:
     0 8px 25px rgba(242,155,193,0.18);
 
-  --font-title: 'Cormorant Garamond', serif;
+  --font-title: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --radius: 24px;
 }

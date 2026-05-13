@@ -1,9 +1,9 @@
+import './SvgIcon.css'
 export function PendingIcon() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            className="stats-svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

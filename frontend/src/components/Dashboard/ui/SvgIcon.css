@@ -1,0 +1,12 @@
+.stats-svg{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px){
+    .stats-svg{
+        width: 20px;
+        height: 20px;
+    }
+}

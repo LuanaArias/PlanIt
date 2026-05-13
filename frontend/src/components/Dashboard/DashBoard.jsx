@@ -35,7 +35,7 @@ export function Dashboard({ tasks }) {
                 />
 
                 <StatsCard
-                    title="Completadas"
+                    title="Completas"
                     value={completed.length}
                     icon= {<CompletedIcon />}
                 />

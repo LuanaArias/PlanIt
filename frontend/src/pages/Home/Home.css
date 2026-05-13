@@ -60,7 +60,7 @@
     text-align: center;
     font-family: var(--font-title);
     font-size: clamp(1rem, 4vw, 3rem);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.04em;
     color: #F4F1F7;
     text-shadow:
