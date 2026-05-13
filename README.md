@@ -10,14 +10,14 @@ PlanIt permite crear, editar, completar y eliminar tareas asociadas a cada usuar
 ## 🌐 Frontend
 Deploy realizado con Firebase Hosting:
 
-[Ver aplicación]([https://planit-b6e6f.web.app](https://planit-b6e6f.web.app))
+[Ver aplicación](https://planit-b6e6f.web.app)
 
 ---
 
 ## ☕ Backend
 API REST desplegada en Render:
 
-[Ver API]([https://TU-BACKEND.onrender.com](https://planit-56ro.onrender.com))
+[Ver API](https://planit-56ro.onrender.com)
 
 ---
 
