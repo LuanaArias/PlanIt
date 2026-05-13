@@ -112,8 +112,7 @@ export default function EmailForm() {
       <button onClick={handleSubmit}>
         {isRegister ? "Registrarse" : "Ingresar"}
       </button>
-
-      {/* 👇 ERROR VISUAL */}
+      
       {error && <p className="error-message">{error}</p>}
 
       <p className="toggle" onClick={() => setIsRegister(!isRegister)}>

@@ -1,50 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@500;600;700&display=swap');
-
 :root {
-  --color-bg: #312A44;            
-  --color-surface: #4A3D63;       
-  --color-surface-light: #6A5A86;
 
-  --color-primary: #8870A3;       
-  --color-secondary: #BAA0C8;     
-  --color-accent: #D7C5D6;        
+  /* Fondo */
+  --color-bg: #6D5B86;
+  --color-bg-secondary: #7C6A98;
 
-  --color-text: #F6F2F8;
-  --color-text-muted: #DAD4DF;
+  /* Superficies */
+  --color-surface: #F4F1F7;
+  --color-surface-light: #FFFFFF;
 
-  --color-border: rgba(255,255,255,0.08);
+  /* Pasteles */
+  --color-primary: #F29BC1;
+  --color-secondary: #7ED6C2;
+  --color-accent: #8FD3FF;
+
+  /* Texto */
+  --color-text: #342B45;
+  --color-text-muted: #7D7391;
+
+  /* Bordes */
+  --color-border: rgba(255,255,255,0.4);
 
   /* Gradientes */
   --gradient: linear-gradient(
     135deg,
-    #241B33 0%,
-    #312A44 45%,
-    #5E4D78 100%
+    #5F4B7A 0%,
+    #73608F 50%,
+    #8A7AA6 100%
   );
 
   --gradient-primary: linear-gradient(
     135deg,
-    #8870A3,
-    #D7C5D6
+    #F29BC1,
+    #8FD3FF
   );
 
   --gradient-soft: linear-gradient(
     135deg,
-    #BAA0C8,
-    #DAD4DF
+    #FCE3EC,
+    #E7F7F3
   );
 
   /* Sombras */
   --shadow-soft:
-    0 14px 30px rgba(22, 14, 34, 0.45);
-
+    0 10px 30px rgba(45, 30, 70, 0.12);
   --shadow-glow:
-    0 10px 30px rgba(186,160,200,.12);
+    0 8px 25px rgba(242,155,193,0.18);
 
-  /* Tipografías */
   --font-title: 'Cormorant Garamond', serif;
   --font-body: 'Inter', sans-serif;
-
-  /* Bordes */
-  --radius: 18px;
+  --radius: 24px;
 }

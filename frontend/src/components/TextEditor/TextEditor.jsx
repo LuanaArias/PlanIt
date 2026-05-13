@@ -16,6 +16,7 @@ import { AlignRight } from "../ui/BotonesEditor/AlignRight.jsx";
 import { AlignCenter } from "../ui/BotonesEditor/AlignCenter.jsx";
 import { AlignLeft } from "../ui/BotonesEditor/AlignLeft.jsx";
 import { IconImage } from "../ui/BotonesEditor/IconImage.jsx";
+import { IconVideo } from "../ui/BotonesEditor/IconVideo.jsx";
 
 export function TextEditor({ content, onChange }) {
 
@@ -239,7 +240,7 @@ export function TextEditor({ content, onChange }) {
                         }
                     }}
                 >
-                    ▶
+                    <IconVideo />
                 </button>
 
             </div>

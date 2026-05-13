@@ -1,38 +1,133 @@
 .dashboard{
     width: 100%;
     padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
+/* GRID */
 .stats-grid{
     display: grid;
+
     grid-template-columns:
-        repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 1.4rem;
 }
 
+/* CHART CONTAINER */
+.charts-container{
+    width: 100%;
+}
+
+/* CARD DEL GRÁFICO */
 .chart-card{
+    position: relative;
+    overflow: hidden;
+
     background:
-        rgba(255,255,255,0.06);
-    backdrop-filter: blur(14px);
-    border: 1 solid var(--color-border);
-    border-radius: 28px;
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.78),
+            rgba(255,255,255,0.58)
+        );
+
+    backdrop-filter: blur(22px);
+
+    border:
+        1px solid rgba(255,255,255,0.35);
+
+    border-radius: 32px;
+
     padding: 2rem;
-    color: var(--color-text);
-    box-shadow: var(--shadow-soft);
-    transition: .3s ease;
+
+    box-shadow:
+        0 12px 35px rgba(35,20,55,0.10);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
 }
 
+/* Glow decorativo */
+.chart-card::before{
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    top: -120px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(143,211,255,0.20),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+/* Hover */
 .chart-card:hover{
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,255,255,0.5);
+
+    box-shadow:
+        0 20px 45px rgba(35,20,55,0.14);
 }
 
+/* TITULO */
 .chart-card h2{
+    position: relative;
+    z-index: 2;
+
     font-family: var(--font-title);
+
     font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: .5px;
-    margin-bottom: 1.5rem;
-    color: var(--color-accent);
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+
+    margin-bottom: 1.8rem;
+
+    color: #342B45;
+}
+
+/* Subtexto opcional */
+.chart-card p{
+    color: #7B718D;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+
+    .dashboard{
+        gap: 1.5rem;
+    }
+
+    .stats-grid{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .chart-card{
+        padding: 1.5rem;
+        border-radius: 26px;
+    }
+
+    .chart-card h2{
+        font-size: 1.7rem;
+    }
 }

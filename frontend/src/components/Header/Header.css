@@ -16,22 +16,92 @@
 }
 
 /* Subtítulo */
-.app-subtitle {
-  color: var(--color-text-muted);
-  margin-top: 8px;
+.app-subtitle{
+    margin-top: .7rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #EDE8F5;
+    opacity: .92;
+    letter-spacing: .02em;
 }
+
 
 /* Logout */
-.logout-btn {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: var(--color-text);
-  padding: 6px 14px;
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: all 0.3s ease;
+.logout-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:
+        .85rem
+        1.3rem;
+    border: none;
+    border-radius: 18px;
+    background:
+        rgba(255,255,255,0.72);
+    color: #5D526F;
+    font-family: var(--font-body);
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow:
+        0 4px 12px rgba(35,20,55,0.08),
+        0 0 0 1px rgba(255,255,255,0.35);
+    transition:
+        all .25s ease;
 }
 
-.logout-btn:hover {
-  background: rgba(255,255,255,0.1);
+.logout-btn:hover{
+    transform:
+        translateY(-2px);
+    background:
+        linear-gradient(
+            135deg,
+            #F29BC1,
+            #8FD3FF
+        );
+    color: white;
+    box-shadow:
+        0 12px 24px rgba(242,155,193,0.22);
+}
+
+.logout-btn:active{
+    transform:
+        scale(.97);
+}
+
+@media (max-width: 768px){
+    .logout-btn{
+        padding:
+            .65rem
+            .95rem;
+        font-size: .82rem;
+        border-radius: 14px;
+        min-height: 38px;
+    }
+}
+
+@media (max-width: 520px){
+    .logout-btn{
+        padding:
+            .55rem
+            .8rem;
+        font-size: .76rem;
+        border-radius: 12px;
+        min-height: 34px;
+        box-shadow:
+            0 3px 8px rgba(35,20,55,0.08),
+            0 0 0 1px rgba(255,255,255,0.25);
+    }
+}
+
+@media (max-width: 390px){
+    .logout-btn{
+        padding:
+            .5rem
+            .7rem;
+        font-size: .72rem;
+        min-height: 32px;
+    }
 }
