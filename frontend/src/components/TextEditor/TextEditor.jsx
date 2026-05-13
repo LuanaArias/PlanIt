@@ -205,7 +205,7 @@ export function TextEditor({ content, onChange }) {
                             .run()
                     }
                     value={
-                        editor.getAttributes("textStyle").color || "#ffffff"
+                        editor.getAttributes("textStyle").color || "#000000"
                     }
                 />
 
