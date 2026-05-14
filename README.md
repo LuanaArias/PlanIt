@@ -17,7 +17,7 @@ Deploy realizado con Firebase Hosting:
 ## ☕ Backend
 API REST desplegada en Render:
 
-[Ver API](https://planit-56ro.onrender.com)
+[Ver API](https://planit-56ro.onrender.com/api/tareas)
 
 ---
 
