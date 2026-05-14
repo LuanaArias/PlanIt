@@ -74,6 +74,12 @@ Las descripciones de tareas incluyen un editor avanzado construido con **TipTap*
 - Spring Boot
 - Spring Data JPA
 - PostgreSQL
+  
+## DevOps & Deploy
+- Docker
+- Docker Compose
+- Firebase Hosting
+- Render
 
 ## Base de datos
 - PostgreSQL
@@ -91,6 +97,14 @@ PlanIt/
 │
 └── README.md
 ```
+
+---
+
+# 🐳 Docker
+El proyecto fue dockerizado para facilitar la ejecución y el despliegue de todos los servicios.
+## Tecnologías utilizadas en la contenedorización
+- Docker
+- Docker Compose
 
 ---
 
@@ -180,7 +194,7 @@ firebase deploy
 
 ## 🌐 Backend desplegado en Render
 
-La API REST desarrollada con Spring Boot fue desplegada utilizando Render.
+La API REST desarrollada con Spring Boot fue desplegada utilizando Render y dockerizada para facilitar la portabilidad y el despliegue.
 
 ### Variables de entorno utilizadas
 
@@ -275,6 +289,7 @@ frontend/src/firebase.js
 Desarrollado por **Luana Arias Lavia** ✨
 - Frontend con React
 - Backend con Java Spring Boot
+- Dockerización completa del proyecto
 - UI/UX personalizada
 - Integración Firebase
 - Deploy Fullstack
