@@ -255,6 +255,15 @@ frontend/src/firebase.js
 ---
 
 # 📸 Capturas
+<img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/4dcc1f4f-92f6-48bc-a3cf-7312e275ff57" />
+
+<img width="1904" height="993" alt="image" src="https://github.com/user-attachments/assets/c1cda302-ed23-45f8-a4ca-00dbf66e0529" />
+<img width="1899" height="989" alt="image" src="https://github.com/user-attachments/assets/4b409f45-cde0-477a-9a0b-3d82d97df6fa" />
+
+<img width="1901" height="991" alt="image" src="https://github.com/user-attachments/assets/f695c12c-7f09-46e8-beae-6f951570f6f4" />
+<img width="1904" height="990" alt="image" src="https://github.com/user-attachments/assets/137c3e41-0240-4fe0-b699-a3e175a3c171" />
+<img width="1904" height="984" alt="image" src="https://github.com/user-attachments/assets/2adfedf5-70d3-45eb-960d-b283b75b92ca" />
+
 
 
 
@@ -274,4 +283,3 @@ Desarrollado por **Luana Arias Lavia** ✨
 # 📄 Licencia
 
 Este proyecto es de uso educativo y de portfolio
-Este proyecto es de uso educativo y de portfolio.
