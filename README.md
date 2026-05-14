@@ -264,6 +264,7 @@ frontend/src/firebase.js
 <img width="1904" height="990" alt="image" src="https://github.com/user-attachments/assets/137c3e41-0240-4fe0-b699-a3e175a3c171" />
 <img width="1904" height="984" alt="image" src="https://github.com/user-attachments/assets/2adfedf5-70d3-45eb-960d-b283b75b92ca" />
 
+<img width="1600" height="802" alt="image" src="https://github.com/user-attachments/assets/661f9137-9808-4fa9-93ca-5bda5910e6da" />
 
 
 
