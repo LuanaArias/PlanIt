@@ -39,12 +39,12 @@ export function TasksBarChart({ tasks }) {
                     <BarChart data={data}>
                         <XAxis
                             dataKey="date"
-                            tick={{ fill: "#DAD4DF" }}
+                            tick={{ fill: "#5F4B7A" }}
                             axisLine={false}
                             tickLine={false}
                         />
                         <YAxis
-                            tick={{ fill: "#DAD4DF" }}
+                            tick={{ fill: "#5F4B7A" }}
                             allowDecimals={false}
                             axisLine={false}
                             tickLine={false}
@@ -53,7 +53,7 @@ export function TasksBarChart({ tasks }) {
                         <Tooltip />
                         <Bar
                             dataKey="total"
-                            fill="#D7C5D6"
+                            fill="#5F4B7A"
                             radius={[12, 12, 0, 0]}
                         />
 

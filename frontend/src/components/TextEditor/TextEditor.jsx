@@ -228,21 +228,40 @@ export function TextEditor({ content, onChange }) {
 
                 <button
                     type="button"
+                    onMouseDown={(e) => e.preventDefault()}
                     onClick={() => {
-                        const url = window.prompt("URL de YouTube");
 
-                        if (url) {
-                            editor.commands.setYoutubeVideo({
-                                src: url,
-                                width: 640,
-                                height: 360,
-                            });
-                        }
-                    }}
-                >
-                    <IconVideo />
-                </button>
+                    const url = window.prompt("URL de YouTube");
 
+                    if (!url) return;
+
+                    let videoId = "";
+
+                    // youtube.com/watch?v=
+                    if (url.includes("watch?v=")) {
+                        videoId = url.split("watch?v=")[1].split("&")[0];
+                    }
+
+                    // youtu.be/
+                    else if (url.includes("youtu.be/")) {
+                        videoId = url.split("youtu.be/")[1].split("?")[0];
+                    }
+
+                    if (!videoId) {
+                        alert("URL inválida");
+                        return;
+                    }
+
+                    editor.commands.setYoutubeVideo({
+                        src: `https://www.youtube.com/embed/${videoId}`,
+                        width: 640,
+                        height: 360,
+                    });
+
+                }}
+            >
+                <IconVideo />
+            </button>
             </div>
 
             {/* EDITOR */}
